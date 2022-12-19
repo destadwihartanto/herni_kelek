@@ -68,6 +68,174 @@
             <marquee>Promo Natal dan Tahun Baru 2022 | Erni Behel Hotel International </marquee>
             <div class="divider">
               <h4 id="tourism">Penawaran Spesial</h4>
+              <h4 id="">Tempat Populer di Indonesia</h4>
+            </div>
+
+            <html>
+<head>
+<style>
+div.gallery {
+  border: 2px solid #ccc;
+  box-shadow: 10px;
+}
+
+div.gallery:hover {
+  border: 1px solid rgb(253, 3, 3);
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 700px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 2px 0px;
+  position: absolute;
+  z-index: 1;
+  bottom: 300%;
+  left: 50%;
+  margin-left: -50px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+</style>
+</head>
+<body>
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="assets/images/taman_nasional_komodo.jpg">
+      <img src="assets/images/taman_nasional_komodo.jpg" alt="Cinque Terre" width="600" height="400">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="assets/hotel/grand-swiss-belhotel-waterfront-seef.jpeg">
+      <img src="assets/hotel/grand-swiss-belhotel-waterfront-seef.jpeg" alt="Forest" width="600" height="400">
+    </a>
+    <div class="desc"> <div class="popup" onclick="myFunction()"><button>Detail</button>
+      <span class="popuptext" id="myPopup">
+<p style="text-align: justify;">
+  Spesial untuk Anda! Nikmati menginap di seluruh hotel Swiss-Belhotel International di Indonesia dan dapatkan DISKON 10% dari Harga Fleksi Terbaik!
+
+Syarat & Ketentuan:
+- Kamar dengan sarapan atau kamar tanpa sarapan tersedia sesuai pilihan Anda
+- Periode pemesanan dan menginap hingga 20 Desember 2022
+- Promo tidak dapat digabungkan dengan promo lainnya yang sedang berlangsung
+- Ketentuan pembatalan yang fleksibel
+- Periode blackout tersedia
+- Berlaku untuk tanggal menginap maksimal 6 hari dari tanggal pemesanan. Untuk tanggal menginap lebih dari 7 hari dari sekarang, harap pesan promo Pesan Lebih Awal - DISKON 15%
+- Berlaku di seluruh properti Zest Hotel dan Swiss-Belhotel International di seluruh dunia
+</p>
+      </span>
+    </div>  </div>
+     
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="assets/images/taman_nasional_komodo.jpg">
+      <img src="assets/images/taman_nasional_komodo.jpg" alt="Northern Lights" width="600" height="400">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="assets/images/taman_nasional_komodo.jpg">
+      <img src="assets/images/taman_nasional_komodo.jpg" alt="Mountains" width="600" height="400">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+</body>
+</html>
+
             </div>
           </div>
         </article>
@@ -125,5 +293,12 @@
     </footer>
     <script src="assets/menu.js"></script>
     <script src="assets/slideshow.js"></script>
+    <script>
+      // When the user clicks on div, open the popup
+      function myFunction() {
+        var popup = document.getElementById("myPopup");
+        popup.classList.toggle("show");
+      }
+      </script>
   </body>
 </html>
