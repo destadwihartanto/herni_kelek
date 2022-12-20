@@ -15,8 +15,83 @@
       rel="stylesheet"
     />
   </head>
+  <style>
+    /* body {
+  padding: 20px;
+  font-family: sans-serif;
+  background: #f2f2f2;
+} */
+img {
+  width: 100%; /* need to overwrite inline dimensions */
+  height: auto;
+}
+h2 {
+  margin-bottom: .5em;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 1em;
+}
+
+
+/* hover styles */
+.location-listing {
+  position: relative;
+}
+
+.location-image {
+  line-height: 0;
+  overflow: hidden;
+}
+
+.location-image img {
+  filter: blur(0px);
+  transition: filter 0.3s ease-in;
+  transform: scale(1.1);
+}
+
+.location-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+  z-index: 1;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity .5s;
+  background: rgba(90,0,10,0.4);
+  color: white;
   
-  <body>
+  /* position the text in t’ middle*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.location-listing:hover .location-title {
+  opacity: 1;
+}
+
+.location-listing:hover .location-image img {
+  filter: blur(2px);
+}
+
+
+/* for touch screen devices */
+@media (hover: none) { 
+  .location-title {
+    opacity: 1;
+  }
+  .location-image img {
+    filter: blur(2px);
+  }
+}
+  </style>
+  <body class="#">
       <nav>
         <img
           class="logo"
@@ -90,174 +165,67 @@
               berbagai taman nasional di Sumatra merupakan contoh tujuan wisata
               alam yang dapat di kunjungi di Indonesia.
             </p>
-            <section class="option">
-              
-              <a target="_blank" href="assets/images/kuta_bali.jpg">
-                <figure class="tourism-figure">
-                  <img src="assets/images/kuta_bali.jpg" alt="kuta bali" />
-                  <figcaption class="option-title">Bali</figcaption>
-                </figure>
-              </a>
-              <a target="_blank" href="assets/images/gunung_bromo.jpg">
-                <figure class="tourism-figure">
-                  <img src="assets/images/gunung_bromo.jpg" alt="gunung bromo" />
-                  <figcaption class="option-title">Jawa Timur</figcaption>
-                </figure>
-              </a>
-              <a target="_blank" href="assets/images/taman_nasional_komodo.jpg">
-                <figure class="tourism-figure">
-                  <img
-                    src="assets/images/taman_nasional_komodo.jpg"
-                    alt="taman nasional komodo"
-                  />
-                  <figcaption class="option-title">NTT</figcaption>
-                </figure>
-              </a>
-              <a target="_blank" href="assets/images/taman_nasional_komodo.jpg">
-                <figure class="tourism-figure">
-                  <img
-                    src="assets/images/taman_nasional_komodo.jpg"
-                    alt="taman nasional komodo"
-                  />
-                  <figcaption class="option-title">NTT</figcaption>
-                </figure>
-              </a>
-            </section>
-            <!-- gambar kedua -->
-            <section class="option">
-              
-              <a target="_blank" href="assets/images/kuta_bali.jpg">
-                <figure class="tourism-figure">
-                  <img src="assets/images/kuta_bali.jpg" alt="kuta bali" />
-                  <figcaption class="option-title">Bali</figcaption>
-                </figure>
-              </a>
-              <a target="_blank" href="assets/images/gunung_bromo.jpg">
-                <figure class="tourism-figure">
-                  <img src="assets/images/gunung_bromo.jpg" alt="gunung bromo" />
-                  <figcaption class="option-title">Jawa Timur</figcaption>
-                </figure>
-              </a>
-              <a target="_blank" href="assets/images/taman_nasional_komodo.jpg">
-                <figure class="tourism-figure">
-                  <img
-                    src="assets/images/taman_nasional_komodo.jpg"
-                    alt="taman nasional komodo"
-                  />
-                  <figcaption class="option-title">NTT</figcaption>
-                </figure>
-              </a>
-              <a target="_blank" href="assets/images/taman_nasional_komodo.jpg">
-                <figure class="tourism-figure">
-                  <img
-                    src="assets/images/taman_nasional_komodo.jpg"
-                    alt="taman nasional komodo"
-                  />
-                  <figcaption class="option-title">NTT</figcaption>
-                </figure>
-              </a>
-            </section>
-            <!-- tempat populer -->
-            <div class="divider">
-              <h4 id="">Tempat Populer di Indonesia</h4>
+           <!-- gambar wisata -->
+           <div class="child-page-listing">
+            <h2>Wisata Populer</h2>
+            <div class="grid-container">
+              <article id="3685" class="location-listing">
+                <a class="location-title" href="#">
+                   Panorama Bali</a>
+                <div class="location-image">
+                  <a href="#">
+                      <img width="300" height="169" src="assets/wisata/bali_ulun_danu_temple_getty_markacontributor_.jpg" alt="san francisco">    </a>
+                </div>
+              </article>
+              <article id="3688" class="location-listing">
+                <a class="location-title" href="#">
+                    Candi Borobudur            </a>
+                <div class="location-image">
+                  <a href="#">
+                      <img width="300" height="169" src="assets/wisata/Candi Borobudur.jpg" alt="london">  </a>
+                </div>
+              </article>
+              <article id="3691" class="location-listing">
+                <a class="location-title" href="#">
+                   Papua            </a>
+                <div class="location-image">
+                  <a href="#">
+                    <img width="300" height="169" src="assets/wisata/papua.jpg" alt="beijing">    </a>
+                  </div>
+              </article>
+              <article id="3694" class="location-listing">
+                <a class="location-title" href="#">
+                    Jakarta           </a>
+                <div class="location-image">
+                  <a href="#">
+                      <img width="300" height="169" src="assets/wisata/jakarta.jpg" alt="cape town">  </a>
+                </div>
+              </article>
+              <article id="3697" class="location-listing">
+                <a class="location-title" href="#">
+                    Island Kalimantan           </a>
+                <div class="location-image">
+                  <a href="#">
+                      <img width="300" height="169" src="assets/wisata/gunung pulau.jpg" alt="new york">  </a>          
+                </div>
+              </article>
+              <article id="3700" class="location-listing">
+                <a class="location-title" href="#">
+                    Pulau Raja Ampat           </a>
+                <div class="location-image">
+                  <a href="#">
+                      <img width="300" height="169" src="assets/wisata/raja ampat.jpg" alt="paris">          
+                    </a>
+                </div>
+              </article>
             </div>
-
-            <html>
-<head>
-<style>
-div.gallery {
-  border: 2px solid #ccc;
-  box-shadow: 10px;
-}
-
-div.gallery:hover {
-  border: 1px solid rgb(253, 3, 3);
-}
-
-div.gallery img {
-  width: 100%;
-  height: auto;
-}
-
-div.desc {
-  padding: 15px;
-  text-align: center;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-.responsive {
-  padding: 0 6px;
-  float: left;
-  width: 24.99999%;
-}
-
-@media only screen and (max-width: 700px) {
-  .responsive {
-    width: 49.99999%;
-    margin: 6px 0;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  .responsive {
-    width: 100%;
-  }
-}
-
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-</style>
-</head>
-<body>
-<div class="responsive">
-  <div class="gallery">
-    <a target="_blank" href="assets/images/taman_nasional_komodo.jpg">
-      <img src="assets/images/taman_nasional_komodo.jpg" alt="Cinque Terre" width="600" height="400">
-    </a>
-    <div class="desc">Add a description of the image here</div>
-  </div>
-</div>
-
-
-<div class="responsive">
-  <div class="gallery">
-    <a target="_blank" href="assets/images/taman_nasional_komodo.jpg">
-      <img src="assets/images/taman_nasional_komodo.jpg" alt="Forest" width="600" height="400">
-    </a>
-    <div class="desc">Add a description of the image here</div>
-  </div>
-</div>
-
-<div class="responsive">
-  <div class="gallery">
-    <a target="_blank" href="assets/images/taman_nasional_komodo.jpg">
-      <img src="assets/images/taman_nasional_komodo.jpg" alt="Northern Lights" width="600" height="400">
-    </a>
-    <div class="desc">Add a description of the image here</div>
-  </div>
-</div>
-
-<div class="responsive">
-  <div class="gallery">
-    <a target="_blank" href="assets/images/taman_nasional_komodo.jpg">
-      <img src="assets/images/taman_nasional_komodo.jpg" alt="Mountains" width="600" height="400">
-    </a>
-    <div class="desc">Add a description of the image here</div>
-  </div>
-</div>
-
-</body>
-</html>
-
+            <!-- end grid container -->
+          </div>
 
         </div>
+        
     </main>
+    
     <footer>
       <div class="footer-content">
         <div class="socials">
